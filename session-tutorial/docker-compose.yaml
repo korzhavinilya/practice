@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/data
+    environment:
+      - POSTGRES_USER=rootuser
+      - POSTGRES_PASSWORD=rootpass
+      - POSTGRES_DB=db
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    ports:
+      - 8081:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=cerber941@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=rootpass
+volumes:
+  data: {}
+networks:
+  default:
+    name: postgres_network

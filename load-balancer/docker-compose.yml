@@ -1,0 +1,28 @@
+version: '3'
+services:
+  nginx_load_balancer:
+    image: nginx
+    volumes:
+      - './nginx/default.conf:/etc/nginx/nginx.conf'
+    ports:
+      - '3000:80'
+  app1:
+    build: .
+    environment:
+      - PORT=3001
+  app2:
+    build: .
+    environment:
+      - PORT=3002
+  app3:
+    build: .
+    environment:
+      - PORT=3003
+  app4:
+    build: .
+    environment:
+      - PORT=3004
+  app5:
+    build: .
+    environment:
+      - PORT=3005

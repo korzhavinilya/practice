@@ -1,0 +1,1 @@
+{"version":3,"file":"bar.module.js","sourceRoot":"","sources":["../../../src/modules/bar/bar.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,+CAA2C;AAWpC,IAAM,SAAS,GAAf,MAAM,SAAS;CAAG,CAAA;AAAZ,SAAS;IATrB,IAAA,eAAM,EAAC;QACN,SAAS,EAAE;YACT;gBACE,OAAO,EAAE,aAAa;gBACtB,QAAQ,EAAE,wBAAU;aACrB;SACF;QACD,OAAO,EAAE,CAAC,aAAa,CAAC;KACzB,CAAC;GACW,SAAS,CAAG;AAAZ,8BAAS"}
