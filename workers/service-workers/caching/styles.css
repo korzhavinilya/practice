@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+nav {
+  border: 1px solid;
+  padding: 0.5rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+nav .current > a {
+  color: red;
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  padding-bottom: 1rem;
+}
