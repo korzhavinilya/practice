@@ -1,11 +1,18 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type Class {
+    _id: ID
+    name: String!
+    users: [User]
+  }
+
   type User {
     _id: ID
     name: String!
     email: String!
     phone: String!
+    class: Class
   }
 
   input UserInput {
@@ -13,6 +20,7 @@ const typeDefs = gql`
     name: String!
     email: String!
     phone: String
+    classId: ID!
   }
 
   input FilterUser {
@@ -20,6 +28,7 @@ const typeDefs = gql`
   }
 
   type Query {
+    classes: [Class]
     users(limit: Int, filter: FilterUser): [User]
   }
 
