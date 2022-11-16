@@ -1,0 +1,2 @@
+defer - loads script async however continues parsing the DOM and executes script after DOM is mounted. Executed before the DOMContentLoaded event
+async - loads script async and executes without waiting the DOM is mounted
