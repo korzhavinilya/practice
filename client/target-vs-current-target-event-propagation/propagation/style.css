@@ -1,0 +1,7 @@
+body,
+div,
+ul,
+li {
+  border: 1px solid;
+  margin: 20px;
+}

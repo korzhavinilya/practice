@@ -1,0 +1,48 @@
+mutation {
+  createUser(
+    user: { name: "Ilya Korzhavin", email: "cerber941@gmail.com", phone: "123" }
+  ) {
+    _id
+    name
+    email
+    phone
+  }
+}
+
+mutation {
+  updateUser(
+    user: {
+      _id: "63494a46e4b040f96ab9d7bc"
+      name: "Ilya Korzhavin"
+      email: "cerber941@gmail.com"
+      phone: "123"
+    }
+  ) {
+    _id
+    name
+    email
+    phone
+  }
+}
+
+mutation {
+  deleteUser(id: "63494a46e4b040f96ab9d7bc") {
+    _id
+    name
+  }
+}
+
+query {
+  users(limit: 50, filter: { name: "Duncan Atkins" }) {
+    name
+  }
+}
+
+query {
+  users {
+    _id
+    name
+    email
+    phone
+  }
+}

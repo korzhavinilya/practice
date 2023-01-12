@@ -1,0 +1,18 @@
+{
+    "version": 3,
+    "file": "main.6603e59b352debb06ced.js",
+    "mappings": "mBAEAA,QAAQC,ICDC,uE",
+    "sources": [
+        "webpack://test/./src/index.js",
+        "webpack://test/./src/generateJoke.js"
+    ],
+    "sourcesContent": [
+        "import generateJoke from './generateJoke';\n\nconsole.log(generateJoke());\n",
+        "function generateJoke() {\n  return 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, autem.';\n}\n\nexport default generateJoke;\n"
+    ],
+    "names": [
+        "console",
+        "log"
+    ],
+    "sourceRoot": ""
+}

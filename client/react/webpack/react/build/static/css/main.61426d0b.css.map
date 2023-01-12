@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.61426d0b.css","mappings":";;;AAAA;EACE,UAAU;AACZ;;;;;ACFA;EACE;AACF,C","sources":["webpack://test/./src/styles/style.css","webpack://test/./src/styles/sass-style.scss"],"sourcesContent":["h1 {\n  color: red;\n}\n","h2 {\n  color: green;\n}\n"],"names":[],"sourceRoot":""}
