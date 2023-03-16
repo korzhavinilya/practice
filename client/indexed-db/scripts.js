@@ -83,5 +83,5 @@ function getUsers() {
 }
 
 initDB();
-// addUser();
+addUser();
 getUsers();
