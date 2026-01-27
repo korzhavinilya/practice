@@ -1,0 +1,8 @@
+h1 {
+  color: #ffb6c1;
+  transition: color 2s ease-out 100ms;
+}
+
+h1:hover {
+  color: #ff1493;
+}

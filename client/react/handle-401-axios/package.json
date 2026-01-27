@@ -1,0 +1,17 @@
+{
+  "name": "handle-401-axios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "dev:client": "npm run dev --prefix ui",
+    "dev:server": "npm run dev --prefix api",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

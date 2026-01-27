@@ -1,0 +1,22 @@
+.scroll-container {
+  border: 1px solid gray;
+  width: 200px;
+  height: 200px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.post-item {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+}

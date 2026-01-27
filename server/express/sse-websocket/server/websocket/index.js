@@ -3,7 +3,7 @@ const ws = require('ws');
 const PORT = 3001;
 const wss = new ws.Server(
   {
-    port: PORT,
+    port: PORT
   },
   () => {
     console.log('Websocket server is running on port', PORT);

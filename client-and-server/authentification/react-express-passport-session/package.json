@@ -1,0 +1,12 @@
+{
+  "name": "react-express-passport-session",
+  "version": "1.0.0",
+  "scripts": {
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm run dev",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

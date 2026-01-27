@@ -1,0 +1,22 @@
+.comments-wrapper {
+  gap: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-wrapper li {
+  padding: 10px;
+  border: 1px solid;
+  list-style-type: none;
+}
+
+.comments-wrapper li:hover {
+  background: gray;
+  cursor: pointer;
+}
+
+.comments-wrapper a {
+  text-decoration: none;
+  color: black;
+}

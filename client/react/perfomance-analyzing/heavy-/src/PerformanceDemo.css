@@ -1,0 +1,68 @@
+.demo-container {
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .comparison-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .case-block {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .box {
+    background-color: #ffebee;
+    border: 2px solid #f44336;
+    overflow: hidden;
+    height: 300px;
+    /* Для чистоты эксперимента делаем анимацию медленной */
+    transition: all 1s linear; 
+  }
+  
+  .heavy-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 5px;
+  }
+  
+  .heavy-item {
+    font-size: 10px;
+    background: white;
+    padding: 2px;
+    border: 1px solid #ccc;
+  }
+  
+  /* --- ВАРИАНТ 1: ПЛОХОЙ --- */
+  /* Браузеру придется пересчитать перенос строк для 1000 элементов */
+  .width-box {
+    width: 100%;
+    will-change: width;
+  }
+  
+  .width-box.shrink-width {
+    width: 50%;
+  }
+  
+  /* --- ВАРИАНТ 2: ХОРОШИЙ --- */
+  /* Браузер выносит это в отдельный слой и сжимает как картинку */
+  .transform-box {
+    width: 100%;
+    transform-origin: left top; /* Точка сжатия слева */
+  }
+  
+  .transform-box.shrink-transform {
+    /* scaleX сжимает только по горизонтали, имитируя width */
+    transform: scaleX(0.5);
+  }

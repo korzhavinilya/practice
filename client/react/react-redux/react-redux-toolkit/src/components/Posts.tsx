@@ -2,15 +2,14 @@ import { useEffect, useState } from 'react';
 import { Post, postAPI } from '../services/postService';
 
 export default function Posts() {
-  const [limit, setLimit] = useState(20);
+  const [limit, setLimit] = useState(5);
   const {
     data: posts,
     isLoading,
     error,
-    refetch,
+    refetch
   } = postAPI.useFetchPostsQuery(
-    limit
-    // { pollingInterval: 1000 }
+    limit // , { pollingInterval: 1000 }
   );
 
   const [createPost, { error: createError, isLoading: isCreateErrorLoading }] =
@@ -39,7 +38,7 @@ export default function Posts() {
     await deletePost(id);
   }
 
-  async function handleUpdatePOst(id: number) {
+  async function handleUpdatePost(id: number) {
     const title = prompt('title') || '';
     const body = prompt('body') || '';
     await updatePost({ id, title, body });
@@ -50,7 +49,7 @@ export default function Posts() {
       style={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column',
+        flexDirection: 'column'
       }}
     >
       <h2>Posts</h2>
@@ -64,7 +63,7 @@ export default function Posts() {
             <h4>{post.title}</h4>
             <h5>{post.body}</h5>
             <button onClick={() => handleDeletePost(post.id)}>delete</button>
-            <button onClick={() => handleUpdatePOst(post.id)}>update</button>
+            <button onClick={() => handleUpdatePost(post.id)}>update</button>
           </li>
         ))}
       </ul>

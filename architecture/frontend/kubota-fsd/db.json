@@ -1,0 +1,53 @@
+{
+    "equipment": [
+        {
+            "id": "2605a433-efb6-492e-9a27-010707bc7173",
+            "name": "A-Do-Not-Edit-1",
+            "model": "RTV-X1140"
+        },
+        {
+            "id": "af164706-92d6-45ab-b885-3160e6eb08ac",
+            "name": "",
+            "model": "SVL65-2HF"
+        },
+        {
+            "id": "22b1ddb3-e1d2-4a82-9501-d0bac8c018bf",
+            "name": "A-Do-Not-Edit-3",
+            "model": "KX057-5"
+        }
+    ],
+    "shares": [
+        {
+            "id": "5f1b4c5d-3b9d-4b1d-8e7f-8d6a9d9c1b8a",
+            "item_details": {
+                "exposedId": "2605a433-efb6-492e-9a27-010707bc7173",
+                "role": "admin",
+                "email": "owner@example.com"
+            },
+            "shared_with": [
+                {
+                    "id": "afbc00c1-bd4f-4ede-a2ec-eb2a171cdfd9",
+                    "email": "me@example.com"
+                },
+                {
+                    "id": "4f1b4c5d-3b9d-4b1d-8e7f-8d6a9d9c1b8a",
+                    "email": "dog@gmail.com"
+                }
+            ]
+        },
+        {
+            "id": "0e9a3cca-8bec-49fe-8024-fcfa363a9a5c",
+            "item_details": {
+                "exposedId": "22b1ddb3-e1d2-4a82-9501-d0bac8c018bf",
+                "role": "owner",
+                "email": "me@example.com"
+            },
+            "shared_with": [
+                {
+                    "id": "4f1b4c5d-3b9d-4b1d-8e7f-8d6a9d9c1b8a",
+                    "email": "dog@gmail.com"
+                }
+            ]
+        }
+    ]
+}

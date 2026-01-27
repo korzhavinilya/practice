@@ -2,18 +2,34 @@ const express = require('express');
 const fs = require('fs');
 const mime = require('mime-types');
 const path = require('path');
+const axios = require('axios');
 
 const port = 3000;
 const app = express();
 
-const filePath = `${__dirname}/assets/image.jpg`;
-// const filePath = `${__dirname}/assets/archive.pdf`;
+// const filePath = `${__dirname}/assets/image.jpg`;
+const filePath = `${__dirname}/assets/archive.pdf`;
 
 const fileName = path.basename(filePath);
 const contentType = mime.lookup(filePath);
 
 const CONTENT_DISPOSITION = 'Content-Disposition';
 const inlineContentDisposition = `inline; filename="${fileName}"`;
+
+app.get('/image', async (req, res) => {
+  const url =
+    'https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp';
+
+  const response = await axios.get(url, {
+    responseType: 'arraybuffer'
+  });
+
+  res.set({
+    'Content-Type': response.headers['content-type']
+  });
+
+  res.send(response.data);
+});
 
 app.get('/sendfile', (req, res) => {
   fs.readFile(filePath, (err, file) => {

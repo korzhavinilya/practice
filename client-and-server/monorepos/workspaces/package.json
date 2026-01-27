@@ -1,0 +1,21 @@
+{
+  "name": "workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "assets",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "backend": "npm run dev -w backend",
+    "frontend": "npm run dev -w frontend",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

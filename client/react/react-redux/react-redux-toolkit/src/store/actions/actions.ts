@@ -8,7 +8,7 @@ export function fetchUsers() {
     dispatch(userSlice.actions.setIsLoading(true));
     try {
       const response = await axios.get<User[]>(
-        'https://jsonplaceholder.typicode.com/users?_limit=3'
+        'http://localhost:3001/users?_limit=3'
       );
       dispatch(userSlice.actions.addUsers(response.data));
     } catch (e: any) {
@@ -23,7 +23,7 @@ export const fetchUsersV2 = createAsyncThunk(
   async function (_, thunkAPI) {
     try {
       const response = await axios.get<User[]>(
-        'https://jsonplaceholder.typicode.com/users?_limit=3'
+        'http://localhost:3001/users?_limit=3'
       );
       return response.data;
     } catch (error: any) {

@@ -1,3 +1,9 @@
-default - by default, as soon as the browser sees a script tag it downloads the file and then executes the script file. The script files are executed in the order of their occurrence.
-defer - loads script async and continues parsing the DOM and executes script after DOM is mounted. Executed before the DOMContentLoaded event
-async - loads script async and executes without waiting the DOM is mounted
+### default
+
+Browser parses the HTML, then it stops to download the 1st script, executes it, then it downloads the 2nd, executes it, and continues parsing the page.
+
+### defer
+
+### async
+
+loads script async and executes without waiting the DOM is mounted

@@ -12,14 +12,36 @@
 <body>
     <p>...content before scripts...</p>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => alert("DOMContentLoaded"));
-        window.addEventListener('load', () => alert('onload'))
-    </script>
-
+    <script src="../scripts//logger.js"></script>
     <script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
 
     <p>...content after scripts...</p>
 </body>
 
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../scripts/logger.js"></script>
+    <script async src="../scripts/foo.js"></script>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+
+    <script async src="../scripts/bar.js"></script>
+
+    <p>lorem ipsum dolor sit amet</p>
+
+    <script async src="../scripts/baz.js"></script>
+
+</body>
+
+</html> -->

@@ -1,0 +1,22 @@
+{
+  "name": "sequelize-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  }
+}

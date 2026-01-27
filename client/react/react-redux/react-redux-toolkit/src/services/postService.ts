@@ -9,7 +9,7 @@ export interface Post {
 export const postAPI = createApi({
   reducerPath: 'postAPI',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/',
+    baseUrl: 'http://localhost:3001',
   }),
   tagTypes: ['Post'],
   endpoints: (build) => ({

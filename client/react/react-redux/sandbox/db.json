@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John",
+      "description": "My first user"
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "description": "My second user"
+    },
+    {
+      "id": "3",
+      "name": "Alex",
+      "description": "My third user"
+    },
+    {
+      "id": "4",
+      "name": "Bob",
+      "description": "My fourth user"
+    }
+  ],
+  "backup-users": [
+    {
+      "id": "1",
+      "name": "John",
+      "description": "My first user"
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "description": "My second user"
+    },
+    {
+      "id": "3",
+      "name": "Alex",
+      "description": "My third user"
+    },
+    {
+      "id": "4",
+      "name": "Bob",
+      "description": "My fourth user"
+    }
+  ]
+}
