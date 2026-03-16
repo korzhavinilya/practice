@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --border: 214.3 31.8% 91.4%;
+
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --radius: 0.5rem;
+
+  /* --- Font --- */
+  --h1-size: 2.25rem;
+  --h2-size: 1.875rem;
+  --h3-size: 1.5rem;
+  --p-size: 1rem;
+  --lead-size: 1.25rem;
+  --large-size: 1.125rem;
+  --small-size: 0.875rem;
+  --muted-size: 0.875rem;
+
+  @media (min-width: 768px) {
+    --h1-size: 3rem;
+    --h2-size: 2.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    --h1-size: 3.75rem;
+    --lead-size: 1.5rem;
+  }
+}
+
+[data-theme="dark"] {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --border: 15 100% 60%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+
+  --muted: 217 19% 27%;
+  --muted-foreground: 215 20% 65%;
+}
+
+@theme inline {
+  /* --- 1. Breakpoints --- */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1280px;
+
+  /* --- 2. Font (Design Tokens) --- */
+  --text-h1: var(--h1-size);
+  --text-h2: var(--h2-size);
+  --text-h3: var(--h3-size);
+  --text-p: var(--p-size);
+  --text-lead: var(--lead-size);
+  --text-large: var(--large-size);
+  --text-small: var(--small-size);
+  --text-muted: var(--muted-size);
+
+  /* --- 3. Colors --- */
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-border: hsl(var(--border));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-primary;
+  }
+}

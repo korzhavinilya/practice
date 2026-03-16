@@ -1,0 +1,81 @@
+2025-07-23 09:09:49.699 error: No such price: 'prod_QI4R0rAhJxrSax'
+2025-07-23 09:10:40.464 error: No such price: 'prod_QI4R0rAhJxrSax'
+2025-07-23 09:44:41.908 error: You specified `payment` mode but passed a recurring price. Either switch to `subscription` mode or use only one-time prices.
+2025-07-23 09:47:12.229 error: Checkout does not support multiple prices with different billing intervals.
+2025-07-23 12:14:02.321 error: You must provide `mode` when using prices.
+2025-07-23 20:59:41.858 error: delete from `user` where `id` = '4c871832-3d74-4f24-9775-ff9778a2e9b5' - SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+2025-07-23 21:35:19.232 error: Validation Error: Required
+2025-07-23 21:59:20.496 error: select * from `product` left join `subscription` on `product`.`id` = `subscription`.`product_id` where `user_id` = '4c871832-3d74-4f24-9775-ff9778a2e9b5' - SQLITE_ERROR: ambiguous column name: user_id
+2025-07-23 22:20:22.535 error: The operator "undefined" is not permitted
+2025-07-23 22:21:01.633 error: The operator "undefined" is not permitted
+2025-07-23 22:26:05.981 error: The operator "undefined" is not permitted
+2025-07-23 22:32:05.687 error: The operator "undefined" is not permitted
+2025-07-23 22:32:30.623 error: The operator "undefined" is not permitted
+2025-07-23 22:32:43.054 error: The operator "undefined" is not permitted
+2025-07-23 22:32:55.030 error: The operator "undefined" is not permitted
+2025-07-23 22:33:07.730 error: The operator "undefined" is not permitted
+2025-07-23 22:35:00.210 error: The operator "undefined" is not permitted
+2025-07-23 22:35:13.132 error: The operator "undefined" is not permitted
+2025-07-23 22:35:32.231 error: The operator "undefined" is not permitted
+2025-07-23 22:36:01.556 error: The operator "undefined" is not permitted
+2025-07-23 22:36:29.159 error: The operator "undefined" is not permitted
+2025-07-23 22:38:41.913 error: No such customer: 'cus_SjcfTulLJWlfDb'
+2025-07-24 07:41:47.264 error: undefined
+2025-07-24 07:41:47.357 error: undefined
+2025-07-24 07:41:47.391 error: undefined
+2025-07-24 07:42:30.792 error: Webhook signature verification failed:
+2025-07-24 07:42:30.864 error: Webhook signature verification failed:
+2025-07-24 07:42:30.908 error: Webhook signature verification failed:
+2025-07-24 07:43:27.907 error: Webhook signature verification failed:
+2025-07-24 07:43:27.989 error: Webhook signature verification failed:
+2025-07-24 07:43:28.032 error: Webhook signature verification failed:
+2025-07-24 08:38:07.092 error: Webhook signature verification failed:
+2025-07-24 08:38:07.426 error: Webhook signature verification failed:
+2025-07-24 08:38:07.433 error: Webhook signature verification failed:
+2025-07-24 08:38:42.288 error: Webhook signature verification failed:
+2025-07-24 08:38:42.375 error: Webhook signature verification failed:
+2025-07-24 08:38:42.401 error: Webhook signature verification failed:
+2025-07-24 08:39:21.839 error: Webhook signature verification failed:
+2025-07-24 08:39:21.909 error: Webhook signature verification failed:
+2025-07-24 08:39:21.952 error: Webhook signature verification failed:
+2025-07-24 08:41:01.973 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 08:41:02.049 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 08:41:02.083 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 08:41:31.499 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 08:41:31.570 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 08:41:31.625 error: Webhook signature verification failed:Webhook payload must be provided as a string or a Buffer (https://nodejs.org/api/buffer.html) instance representing the _raw_ request body.Payload was provided as a parsed JavaScript object instead. 
+Signature verification is impossible without access to the original signed material. 
+
+Learn more about webhook signing and explore webhook integration examples for various frameworks at https://docs.stripe.com/webhooks/signature
+
+2025-07-24 11:57:14.191 error: User not found by stripe_customer_id: 4c871832-3d74-4f24-9775-ff9778a2e9b5: 
+2025-07-24 13:20:23.246 error: No such customer: 'cus_Sjqb268hQzbTPn'
+2025-07-24 15:22:57.203 error: No such subscription: 'sub_1RoNhEBXjtiPlmVCdwZlmWbc'
+2025-07-28 15:24:26.024 error: You may only specify one of these parameters: allow_promotion_codes, discounts.
+2025-07-28 15:24:58.172 error: You may only specify one of these parameters: allow_promotion_codes, discounts.
+2025-07-28 15:29:58.896 error: Array discounts exceeded maximum 1 allowed elements.
+2025-07-28 15:30:10.250 error: No such promotion code: 'C4JyDgcf'
+2025-07-28 16:10:03.434 error: You can not pass `payment_intent_data` in `subscription` mode.
+2025-07-28 16:30:48.335 error: You can only enable invoice creation when `mode` is set to `payment`. Invoices are created automatically when `mode` is set to `subscription`, and are unsupported when set to `setup`. To learn more visit https://stripe.com/docs/payments/checkout/post-payment-invoices.
+2025-07-29 11:56:34.658 error: No such subscription: 'sub_1RqAGBBXjtiPlmVCPu2AhKb9'
+2025-07-29 14:36:20.721 error: No such subscription: 'sub_1RqCgaBXjtiPlmVC9HUFgOgT'

@@ -1,0 +1,74 @@
+---
+alwaysApply: true
+---
+
+# Cursor Rules: React + Vite + Shadcn + Zustand + Modular Architecture
+
+# Critical Rules
+
+- **Formatting**: Tabs, No semicolons, Single quotes.
+- **Tone**: Concise, strictly code-focused.
+- **No Comments**: Never write code comments or docstrings unless explicitly asked.
+- **Architecture**: Modular feature-based (`src/features/`).
+- **Stack**: React, Vite, Shadcn UI, Zustand, React Hook Form, Zod, Vitest.
+- **Data**: Use `json-server` with `db.json`.
+
+## 1. Development Philosophy
+
+- **Modular Architecture**: Organization by feature (e.g., `src/features/auth`). Each feature is self-contained.
+- **Declarative Style**: Prefer functional components and hooks over classes.
+- **Type Safety**: Use TypeScript strictly. No `any`. Use `interface` for data structures.
+
+## 2. Tech Stack & Tools
+
+- **Build Tool**: Vite
+- **UI**: Shadcn UI (Radix UI + Tailwind CSS)
+- **Forms**: React Hook Form with Zod validation
+- **State**: Zustand (atomic stores)
+- **Testing**: Vitest + React Testing Library
+- **Linting**: No semicolons, single quotes, tabs for indentation.
+
+## 3. Modular Structure Guidelines
+
+Every feature in `src/features/[feature-name]` should follow this internal structure:
+
+- `components/`: Feature-specific UI.
+- `hooks/`: Custom hooks for this feature.
+- `store/`: Zustand stores for the feature.
+- `services/`: API calls and data fetching.
+- `types/`: TypeScript definitions.
+- `index.ts`: The public API (only export what’s needed outside).
+
+## 4. Code Style & Naming
+
+- **Files/Folders**: `kebab-case` (e.g., `user-profile/user-card.tsx`).
+- **Components**: `PascalCase` using the `function` keyword.
+- **Indentation**: Tabs.
+- **Semicolons**: Do not use.
+- **Handlers**: Prefix event handlers with 'handle' (`handleClick`).
+- **Booleans**: Prefix with verbs (`isLoading`, `hasAccess`).
+
+## 5. UI & Shadcn Implementation
+
+- **Base Components**: Keep Shadcn components in `src/components/ui`.
+- **Customization**: Modify Shadcn components via Tailwind classes in `className`.
+- **Composition**: Prefer component composition over giant prop lists.
+- **Icons**: Use Lucide React (standard with Shadcn).
+
+## 6. Form Handling & Validation
+
+- Use **Zod** to define schemas. Name them `[name]Schema`.
+- Always integrate Zod with **React Hook Form** via `@hookform/resolvers/zod`.
+- Use Shadcn's `<Form />` wrapper components for accessible and styled fields.
+
+## 7. State Management (Zustand)
+
+- Use small, focused stores.
+- Name hooks `use[Feature]Store`.
+- Always use selectors to pull state: `const user = useUserStore((s) => s.user)`.
+
+## 8. Testing (Vitest)
+
+- Test files live next to the code: `my-component.test.tsx`.
+- Use `Arrange-Act-Assert` pattern.
+- Mock API responses; don't make real network calls in tests.

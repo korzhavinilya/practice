@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+    button:focus {
+        @apply outline-none;
+    }
+}
