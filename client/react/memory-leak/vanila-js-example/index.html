@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Leak Debug</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .box { padding: 10px; margin: 10px 0; border: 2px dashed red; background: #fff0f0; }
+        button { padding: 10px; cursor: pointer; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Поиск утечек (Vanilla JS)</h1>
+    <button id="add">1. Создать элемент (+ утечка)</button>
+    <button id="remove">2. Удалить из DOM (но не из памяти!)</button>
+    <div id="container"></div>
+
+    <script>
+        // Сюда мы будем складывать ссылки, которые "забыли" удалить
+        const forgottenRefs = []; 
+
+        document.getElementById('add').addEventListener('click', () => {
+            const container = document.getElementById('container');
+            
+            // Создаем элемент
+            const leakyDiv = document.createElement('div');
+            leakyDiv.className = 'box';
+            leakyDiv.innerText = 'Я — элемент-призрак. Меня удалят из DOM, но я останусь в памяти.';
+
+            // 1. УТЕЧКА СТРОКИ/МАССИВА: вешаем тяжелые данные прямо на объект элемента
+            leakyDiv.hugeData = new Array(1000000).fill('🔥 ТЯЖЕЛАЯ СТРОКА №' + Date.now());
+
+            // 2. УТЕЧКА УЗЛА (Detached Node): сохраняем ссылку в глобальный массив
+            forgottenRefs.push(leakyDiv);
+
+            container.appendChild(leakyDiv);
+            console.log('Элемент добавлен. В массиве забытых ссылок:', forgottenRefs.length);
+        });
+
+        document.getElementById('remove').addEventListener('click', () => {
+            const container = document.getElementById('container');
+            if (container.firstChild) {
+                // Удаляем элемент физически со страницы
+                container.removeChild(container.firstChild);
+                console.log('Элемент удален из DOM, но забыт в массиве forgottenRefs!');
+            }
+        });
+    </script>
+</body>
+</html>
